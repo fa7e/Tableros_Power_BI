@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableros Power BI</title>
+</head>
+<body>
+  <h1>Tableros Power BI</h1>
+  <div id="menu"></div>
+  <iframe id="iframeTablero" frameborder="0" allowFullScreen="true" width="100%" height="600"></iframe>
+
+  <script>
+    // Cargar el archivo JSON desde la carpeta "static"
+    fetch('/static/tableros.json')
+      .then(response => response.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const iframe = document.getElementById('iframeTablero');
+
+        data.forEach((tablero, index) => {
+          const boton = document.createElement('button');
+          boton.textContent = tablero.titulo;
+          boton.style.margin = "5px";
+          boton.onclick = () => iframe.src = tablero.url;
+          menu.appendChild(boton);
+
+          // Cargar el primer tablero por defecto
+          if (index === 0) iframe.src = tablero.url;
+        });
+      })
+      .catch(error => console.error('Error cargando tableros:', error));
+  </script>
+</body>
+</html>

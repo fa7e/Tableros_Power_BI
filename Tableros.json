@@ -1,0 +1,10 @@
+[
+  {
+    "titulo": "Venta Neta Por Query",
+    "url":"https://app.powerbi.com/reportEmbed?reportId=44fbb100-796d-4691-95e9-7b959c5e6335&autoAuth=true&ctid=7cf62caf-6803-4d69-8c52-ac9d752160b6"
+  },
+  {
+    "titulo": "Reporte Financiero",
+    "url": "https://app.powerbi.com/reportEmbed?reportId=300e74ea-3af1-4552-84e6-7f553f4a6e78&autoAuth=true&ctid=7cf62caf-6803-4d69-8c52-ac9d752160b6"
+  }
+]
